@@ -1,7 +1,7 @@
 <%-- 
     Document   : login
     Created on : 09-jun-2018, 20:45:53
-    Author     : Jeshua Banda
+    Author     : Jeshua Banda B.
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
