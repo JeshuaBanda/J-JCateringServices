@@ -3,39 +3,38 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DAO;
+package Modelo.Dao;
 
 /**
  *
  * @author Jeshua
  */
 import Utilitarios.ConexionBD;
-import Entidades.Clientes;
+import Modelo.Bean.UsuarioBean;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class ClientesDAO 
+public class UsuarioDao 
 {
     Connection cn = null;
     PreparedStatement pt = null;
     ResultSet rs = null;
-    ArrayList<Clientes> listadoClientes = null;
-    Clientes objCliente = null;
+    ArrayList<UsuarioBean> listadoClientes = null;
+    UsuarioBean objUsuario = null;
     
-    public boolean ValidarCliente(Clientes objCliente)
+    public boolean ValidarUsuario(UsuarioBean objUsuario)
     {
-       boolean val=false;
+       boolean val=true;
         try {
             cn = ConexionBD.getConexionBD();
-            pt=cn.prepareStatement("select  * from  cliente where email_cli=? and password_cli=? and id=? ; ");
-            pt.setString(1, objCliente.getEmail_cli());
-            pt.setString(2, objCliente.getContraseña_cli());  
-            pt.setInt(3,1);
+            pt=cn.prepareStatement("select  * from  usuario where usuario_cli=? and contraseña_cli=? ; ");
+            pt.setString(1, objUsuario.getUsuario_cli());
+            pt.setString(2, objUsuario.getContraseña_cli()); 
                     
             rs=pt.executeQuery();
             
             if(rs.next())
-            { val=true;
+            { val = false;
             }            
             pt.close();
             rs.close();

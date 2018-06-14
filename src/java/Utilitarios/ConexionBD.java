@@ -18,7 +18,7 @@ public class ConexionBD
         try 
         {
             Class.forName("com.mysql.jdbc.Driver");     
-            cn=DriverManager.getConnection("jdbc:mysql://localhost:3307/gym","root","");
+            cn=DriverManager.getConnection("jdbc:mysql://localhost/caterinservices","root","");
             System.out.println("Se Conecto !!!!");
         } catch (Exception e) 
         {  

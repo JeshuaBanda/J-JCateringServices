@@ -95,7 +95,6 @@
         <!-- end header -->
     </div>
 	<!-- end site-header -->
-	
     <div id="banner" class="banner full-screen-mode parallax">
         <div class="container pr">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -107,7 +106,8 @@
                             <p>Innovamos para ofrecer elementos de alta distinción, que aporten sencillez y frescura.</p>
                             <div class="book-btn">
                                 <!--<a href="#reservation" class="table-btn hvr-underline-from-center">Book my Table</a>-->
-                                <a href="login.jsp" class="table-btn hvr-underline-from-center">Login</a>
+                                <a href="Vista/Seguridad/Usuario/FrmLoginUsuario.jsp" class="table-btn hvr-underline-from-center">Login</a>
+                                
                             </div>
                             <a href="#about">
                                 <div class="mouse"></div>
