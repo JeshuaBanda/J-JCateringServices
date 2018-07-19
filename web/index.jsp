@@ -106,7 +106,7 @@
                             <p>Innovamos para ofrecer elementos de alta distinción, que aporten sencillez y frescura.</p>
                             <div class="book-btn">
                                 <!--<a href="#reservation" class="table-btn hvr-underline-from-center">Book my Table</a>-->
-                                <a href="Vista/Seguridad/Usuario/FrmLoginUsuario.jsp" class="table-btn hvr-underline-from-center">Login</a>
+                                <a href="login.jsp" class="table-btn hvr-underline-from-center">Login</a>
                                 
                             </div>
                             <a href="#about">

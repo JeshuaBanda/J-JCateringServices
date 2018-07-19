@@ -475,5 +475,51 @@ iframe {
   }
 }
 
+/*ESTILOS MENU DESPLEGABLE  */
+.dropbtn {
+    background-color: #1C1C1C;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    background-color: #1C1C1C
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1C1C1C;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 1% 1% 1% 1%;
+    font-size:0.9vw;
+    text-align:center;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #1C1C1C}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #1C1C1C;
+}
+@font-face {
+    font-family: "animacion";
+    src: url("../fonts/college.ttf");
+}
+
 
 

@@ -16,21 +16,21 @@
         <title>JSP Page</title>
     </head>
     <body>
-        
     <%
     String userid = request.getParameter("username");    
     String pwd = request.getParameter("pass");
     Class.forName("com.mysql.jdbc.Driver");
-    Connection con = DriverManager.getConnection("jdbc:mysql://localhost/caterinservice","root","");
-    Statement st = con.createStatement();
+    Connection cn=DriverManager.getConnection("jdbc:mysql://localhost/j&j","root","");
+    Statement st = cn.createStatement();
     ResultSet rs;
-    rs = st.executeQuery("select * from usuario where usuario_cli='" + userid + "' and contraseña_cli='" + pwd + "'");
+    rs = st.executeQuery("select * from Usuario where email_cli='" + userid + "' and password_cli='" + pwd + "'");
     if (rs.next()) {
-        session.setAttribute("Usuario", userid);
-        response.sendRedirect("seguridad/FrmPrincipalAdmin");
-    } else {    
+        session.setAttribute("User", userid);
+         response.sendRedirect("../Principal.jsp");
+    } else {
+       //response.sendRedirect("errorLogin.jsp");      
         out.println("<center><h1>Vuelva a Ingresar</h1></center>");
-         out.println("<center><a href='seguridad/Usuario/FrmLoginUsuario'>Ir a Login</a></center>");
+         out.println("<center><a href='../login.jsp'>Ir a Login</a></center>");
     }
     %>
     </body>
